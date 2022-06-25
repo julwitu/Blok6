@@ -18,4 +18,5 @@ int main() {
 	MyString full = alaMaKotaAKotMa.append(ale);
 	full.print();
 
+
 }

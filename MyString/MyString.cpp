@@ -20,6 +20,15 @@ MyString::MyString(char* input)
 
 }
 
+MyString::MyString(const MyString& other)
+{
+	this->arr = new char[std::strlen(other.arr)];
+	for (int i = 0; i < std::strlen(other.arr); i++) {
+		this->arr[i] = other.arr[i];
+	}
+	this->arr[std::strlen(other.arr)] = '\0';
+}
+
 void MyString::print()
 {
 	std::cout << arr;
@@ -52,29 +61,33 @@ MyString MyString::append(char* input)
 
 MyString MyString::append(MyString input)
 {
-	MyString result = this->append(input.arr);
+	MyString result = this->append(input.arr); // wywoluje metode append (z lini wyzej) na obiekcie
 	//	MyString full = alaMaKotaAKotMa.append(ale); <- wklejone pogladowo z main. Nie moze znalezc sie w tym miejscu w kodzie!
 	return result;
 }
 
 MyString MyString::firstWord()
 {
-	//int length = 0;
-	//for (int i = 0; i < std::strlen(arr); i++) {
-	//	if (arr[i] = ' ') {
-	//		length = i;
-	//	}
-	//}
-	//char* newArr = new char[length];
-	//for (int i = 0; i < length; i++) {
-	//	newArr[i] = arr[i];
-	//}
-	//return MyString(newArr);
-	return 0;
+	int length = 0;
+	for (int i = 0; i < std::strlen(arr); i++) {
+		if (arr[i] == ' ') {
+			length = i;
+			break;
+		}
+	}
+	char* newArr = new char[length];
+	for (int i = 0; i < length; i++) {
+		newArr[i] = arr[i];
+		std::cout << newArr[i]; 
+	}	
+	std::cout << std::endl;
+
+	return MyString(newArr);
 }
 
 MyString::~MyString()
 {
 	delete[] arr;
 	arr = nullptr;
+
 }
