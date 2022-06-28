@@ -50,36 +50,7 @@ void Robber::robWhatever(Shop& shop){
 }
 
 void Robber::robGreedy(Shop& shop) {
-    //int values[10];
-    //int weights[10];
-    //double results[10];
-    //for (int i = 0; i < 10; i++) {
-    //    values[i] = shop.peek(i).value;
-    //    weights[i] = shop.peek(i).weight;
-    //   values[i] /= weights[i];
-    //   results[i] = static_cast<double>(values[i]) / weights[i];
-    //}
-    //for (int i = 0; i < 10; i++) {
-    //    std::cout << values[i] << " ";
-    //}
-    //std::cout << std::endl;
-    //for (int i = 0; i < 10; i++) {
-    //    std::cout << weights[i] << " ";
-    //}
-    //std::cout << std::endl;
-    //for (int i = 0; i < 10; i++) {
-    //    std::cout << results[i] << " ";
-    //}
-    //std::cout << std::endl << std::endl;
-    //int max;
-    //for (int i = 0; i < 10; i++) {
-    //    max = results[0];
-    //    if (results[i] > max) {
-    //        max = results[i];
-    //    }
-    //}
-    //if (backpack.fits(max)) {
-    //}
+    //nie dziala poprawnie
     for (int m = 0; m < 10; m++) {
         double results[10];
         Item item;
@@ -97,13 +68,15 @@ void Robber::robGreedy(Shop& shop) {
                     results[k] = 0;
                 }
             }
-            if (backpack.fits(/*co tu wpisac */) {
+            //co w nawiasie zamiast item.weight
+            if (backpack.fits(item.weight)) {
                 item = shop.steal(maxIndex);
                     backpack.put(item);
             }
             max = 0;
         }
     }
+
 }
     
 

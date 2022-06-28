@@ -13,10 +13,10 @@ int main()
 	//std::cout << "Value of backpack: " << robber.getValue() << std::endl;
 	//std::cout << shop;
 	//std::cout << robber;
-
-	std::cout << "**************************************" << std::endl;
 	robber.robGreedy(shop);
-
+	std::cout << "Value of backpack: " << robber.getValue() << std::endl;
+	std::cout << shop;
+std::cout << robber;
 }
 
 //robber.rob___
