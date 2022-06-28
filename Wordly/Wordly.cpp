@@ -36,9 +36,11 @@ std::string Wordle::test(std::string guess)
 bool Wordle::isFinished()
 {
 	bool finished = false;
+	
 	if (attempt>5 || (guesses[attempt] == secret) && (answers[attempt] == "GGGGG")){
 		finished = true;
-	} 
+	}
+
 	attempt++;
 	return finished;
 }
