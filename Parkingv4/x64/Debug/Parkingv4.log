@@ -1,7 +1,0 @@
-﻿  main.cpp
-C:\Users\jwitu\OneDrive\Pulpit\SDA\ObiektowoscCwiczenia\Parkingv4\Parkingv4.hpp(10,26): error C2061: syntax error: identifier 'ParkingLot'
-  Parkingv4.cpp
-C:\Users\jwitu\OneDrive\Pulpit\SDA\ObiektowoscCwiczenia\Parkingv4\Parkingv4.hpp(10,26): error C2061: syntax error: identifier 'ParkingLot'
-C:\Users\jwitu\OneDrive\Pulpit\SDA\ObiektowoscCwiczenia\Parkingv4\Parkingv4.cpp(7,49): error C2511: 'void Vehicle::parkFirstAvailable(ParkingLot &)': overloaded member function not found in 'Vehicle'
-C:\Users\jwitu\OneDrive\Pulpit\SDA\ObiektowoscCwiczenia\Parkingv4\Parkingv4.hpp(5): message : see declaration of 'Vehicle'
-  Generating Code...
