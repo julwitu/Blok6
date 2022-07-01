@@ -1,6 +1,0 @@
-﻿  Parkingv2.cpp
-C:\Users\jwitu\OneDrive\Pulpit\SDA\ObiektowoscCwiczenia\Parkingv2\Parkingv2.cpp(12,22): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\jwitu\OneDrive\Pulpit\SDA\ObiektowoscCwiczenia\Parkingv2\Parkingv2.cpp(13,23): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-  main.cpp
-  Generating Code...
-  Parkingv2.vcxproj -> C:\Users\jwitu\OneDrive\Pulpit\SDA\ObiektowoscCwiczenia\x64\Debug\Parkingv2.exe
