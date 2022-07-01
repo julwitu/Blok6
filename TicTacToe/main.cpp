@@ -7,7 +7,7 @@ int main() {
 	Game g(p1, p2);
 
 	g.start();
-
+	g.reset();
 	delete p1;
 	delete p2;
 

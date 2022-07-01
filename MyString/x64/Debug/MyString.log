@@ -1,2 +1,7 @@
-﻿  main.cpp
+﻿  MyString.cpp
+C:\Users\jwitu\OneDrive\Pulpit\SDA\ObiektowoscCwiczenia\MyString\MyString.cpp(11,33): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\jwitu\OneDrive\Pulpit\SDA\ObiektowoscCwiczenia\MyString\MyString.cpp(46,32): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\jwitu\OneDrive\Pulpit\SDA\ObiektowoscCwiczenia\MyString\MyString.cpp(47,34): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  main.cpp
+  Generating Code...
   MyString.vcxproj -> C:\Users\jwitu\OneDrive\Pulpit\SDA\ObiektowoscCwiczenia\x64\Debug\MyString.exe

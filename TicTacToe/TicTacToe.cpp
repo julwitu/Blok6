@@ -38,7 +38,32 @@ Game::Game(Player* p1, Player* p2)  {
 	currentPlayer = player1;
 }
 bool Board::isOver() {
-	return false;
+	bool isOver = false;
+	if (this->isOverRows() || this->isOverCols() || this->isOverDiagonals())
+		isOver = true;
+	return isOver;
+}
+bool Board::isOverRows() {
+	bool isOver = false;
+	if ((table[0][0] != CheckerState::empty && table[0][0] == table[0][1] && table[0][1] == table[0][2]) || (table[1][0]!= CheckerState::empty && table[1][0] == table[1][1] && table[1][1] == table[1][2]) || (table[2][0]!=CheckerState::empty && table[2][0] == table[2][1] && table[2][1] == table[2][2]))
+			isOver = true;
+	return isOver;
+}
+bool Board::isOverCols() {
+	bool isOver = false;
+	if ((table[0][0]!=CheckerState::empty && table[0][0] == table[1][0] && table[1][0] == table[2][0]) || (table[0][1]!=CheckerState::empty && table[0][1] == table[1][1] && table[1][1] == table[2][1]) || (table[0][2]!= CheckerState::empty && table[0][2] == table[1][2] && table[1][2] == table[2][2]))
+			isOver = true;
+	return isOver;
+}
+bool Board::isOverDiagonals() {
+	bool isOver = false;
+	if ((table[0][0]!=CheckerState::empty && table[0][0] == table[1][1] && table[1][1] == table[2][2]) || (table[0][2] != CheckerState::empty && table[0][2] == table[1][1] && table[1][1] == table[2][0]))
+		isOver = true;
+	return isOver;
+}
+
+bool Board::xWon() {
+	return true;
 }
 void Game::start() {
 	do {
@@ -50,7 +75,8 @@ void Game::start() {
 
 
 bool Board::set(CheckerState cs, int x, int y) {
-	table[x][y] = cs;
+	if (table[x][y] == CheckerState::empty)
+		table[x][y] = cs;
 	return true;
 }
 
@@ -74,3 +100,11 @@ void Game::swapPlayer() {
 	}
 }
 Player::Player(CheckerState _colour) : colour(_colour){};
+
+void Game::reset() {
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++) {
+			board.set(CheckerState::empty, i, j);
+		}
+	}
+}
